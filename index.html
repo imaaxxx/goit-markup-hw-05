@@ -13,6 +13,12 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Inter&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+
+<!-- *************************************АНИМАЦИЯ************************* -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <!--*************************************HEADER***********************************-->
@@ -60,14 +66,15 @@
   <section class="section-hero">
     <div class="container">
 
-    <h1 class="title-hero"> Эффективные решения для вашего бизнеса </h1>
-    <button name="button" class="btn-hero">Заказать услугу</button>
-
+    <h1 class="title-hero animate__animated animate__fadeInDown"> Эффективные решения для вашего бизнеса </h1>
+    <button name="button" class="btn-hero" data-modal-open>Заказать услугу</button>
+    
   </div>
   </section>
   <!--*******************************SKILLS-BENEFITS*********************************-->
 <section class="benefits-section">
   <div class="container">
+    <div data-aos="zoom-in">
   <h2 class="visually-hidden">Преимущества</h2>
   <ul class="benefits-list">
     <li class="benefits-item skills-icon-antenna">
@@ -91,28 +98,44 @@
     </li>
   </ul>
 </div>
+</div>
 </section>
 <!--**********************************SPECIALIZATION****************************************-->
 <section class="specialization section">
   <div class="container">
   <h2 class="specialization-title">Чем мы занимаемся</h2>
-  <ul class="specialization-list">
+
+  <div data-aos="fade-right">
+<ul class="specialization-list">
+
     <li class="specialization-item">
       <img src="./images/jobpk.jpg" alt="ПК" width="370"/>
+<div class="specializations-cards">
+  <p class="desktop-title"> Десктопные приложения </p>
+</div>
       </li>
+
       <li class="specialization-item">
       <img src="./images/mobilephone.jpg" alt="Мобильный" width="370"/>
+      <div class="specializations-cards">
+        <p class="desktop-title"> Мобильные приложения </p>
+      </div>
     </li>
     <li class="specialization-item">
       <img src="./images/tablet.jpg" alt="Планшет" width="370"/>
+      <div class="specializations-cards">
+        <p class="desktop-title"> Дизайнерские решения </p>
+      </div>
     </li>
   </ul>
+</div>
 </div>
 </section>
 <!--********************************TEAM***********************************************-->
 <section class="section-team">
   <div class="container">
   <h2 class="team-title">Наша команда</h2>
+  <div data-aos="flip-left">
 <ul class="team-list"> 
   <li class="team-card">
     <img src="./images/team-1.jpg" alt="Демьяненко" width="270"/>
@@ -282,6 +305,7 @@
   </li>
 </ul>
 </div>
+</div>
 </section>
 <!--***************************CLIENTS*******************************  -->
 <section class="section-clients">
@@ -396,5 +420,31 @@
   </div>
 
 </footer>
+
+<!--**************************MODAL WINDOW***************************  -->
+
+<div class="backdrop is-hidden" data-modal>
+<div class="modal">
+  <button type="button" class="modal-close-btn" data-modal-close>
+    <svg class="button-modal" width="11" height="11">
+      <use href="./images/icons.svg#icon-close">
+      </use>
+    </svg>
+  </button>
+</div>
+</div>
+
+<!-- ***************************************************************** -->
+
+
+<script src="./js/modal.js"></script>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
 </body>
 </html>
